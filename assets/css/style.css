@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --primary-background:#8B9A6E;
+    --main-div:#EAE2D6;
+}
+body{
+    background-color: #EAE2D6;
+}
+.main-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 300px;
+}
+.main-card{
+    background-color: var(--primary-background);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+.fig1{
+    display: flex;
+}
+
+.fig .img {
+    height: 200px;
+    object-fit: cover;
+}
+.top{
+    display: flex;
+}
+.main-card .pp{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.pp figcaption{
+    margin-left: 10px;
+}
+.fig .ev{
+    height: 100px;
+    width: 200px;
+    margin: 10px 10px 10px 30px;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: 100% 25%;
+}
+.btn{
+    margin-top: 10px;
+    display:flex;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+}

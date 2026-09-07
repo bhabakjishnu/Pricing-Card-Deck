@@ -1,13 +1,17 @@
 /* =========================================
    Variables & Reset
    ========================================= */
-:root {
+   :root {
     --body-background: #F5F5F5;
     --card-background: bisque;
     --header-background: #01B7FF;
-    --text-light: #ffffff;
+    --text-light: black;
     --text-dark: #333333;
-    --btn-background: #000000;
+    --btn-background: white;
+    --logo-color:white;
+    /* New dedicated footer variables added */
+    --footer-bg: #333333;
+    --footer-text: #ffffff;
 
     --font-logo: "Knewave", system-ui;
     --font-heading: "Archivo Black", sans-serif;
@@ -51,13 +55,22 @@ body {
     gap: 1rem;
 }
 
+/* Force logo to take equal side space and align its content to the left */
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .logo a {
     text-decoration: none;
     font-family: var(--font-logo);
-    color: var(--text-light);
+    color: var(--logo-color);
     font-size: 1.75rem;
 }
 
+/* The nav will now naturally rest in the exact center */
 .nav-list {
     display: flex;
     list-style: none;
@@ -67,7 +80,7 @@ body {
 .nav-list a {
     text-decoration: none;
     font-weight: 700;
-    color: var(--text-light);
+    color: var(--logo-color);
     transition: opacity 0.2s ease;
 }
 
@@ -75,8 +88,11 @@ body {
     opacity: 0.8;
 }
 
+/* Force auth actions to take equal side space and align to the right */
 .auth-actions {
+    flex: 1;
     display: flex;
+    justify-content: flex-end;
     gap: 1rem;
 }
 
@@ -92,7 +108,7 @@ body {
 
 .btn:hover {
     transform: translateY(-2px);
-    background-color: #333;
+    background-color: #e0e0e0; /* adjusted for the white button bg */
 }
 
 /* =========================================
@@ -106,7 +122,6 @@ body {
     padding: 3rem 2rem;
     flex-grow: 1;
     
-    /* ADDED THESE TWO LINES */
     align-items: flex-start;   /* Stops individual cards from stretching vertically */
     align-content: flex-start; /* Packs multiple rows of cards neatly at the top */
 }
@@ -237,8 +252,8 @@ body {
    Site Footer
    ========================================= */
 .site-footer {
-    background-color: var(--text-dark);
-    color: var(--text-light);
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     padding: 3rem 2rem 1rem;
     width: 100%;
 }
@@ -283,7 +298,7 @@ body {
 }
 
 .social-list a {
-    color: var(--text-light);
+    color: var(--footer-text);
     font-size: 1.5rem;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
@@ -311,6 +326,13 @@ body {
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
+    }
+    
+    /* Reset the side spacing so they stack dead-center on mobile */
+    .logo, 
+    .auth-actions {
+        justify-content: center;
+        flex: unset;
     }
 
     .nav-list {

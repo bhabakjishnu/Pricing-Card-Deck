@@ -1,14 +1,14 @@
 /* =========================================
    Variables & Reset
    ========================================= */
-   :root {
+:root {
     --body-background: #F5F5F5;
     --card-background: bisque;
     --header-background: #01B7FF;
     --text-light: #ffffff;
     --text-dark: #333333;
     --btn-background: #000000;
-    
+
     --font-logo: "Knewave", system-ui;
     --font-heading: "Archivo Black", sans-serif;
     --font-body: "Poppins", sans-serif;
@@ -26,7 +26,7 @@ html {
     scroll-behavior: smooth;
     /* Ensure the body takes up at least the full viewport height 
        so the footer stays at the bottom on short pages */
-    height: 100%; 
+    height: 100%;
 }
 
 body {
@@ -101,15 +101,24 @@ body {
 .main-content {
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* Removed fixed min-height, flexbox on body handles this now */
-    padding: 3rem 2rem; 
-    flex-grow: 1; /* Pushes footer to the bottom */
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    flex-grow: 1;
+    
+    /* ADDED THESE TWO LINES */
+    align-items: flex-start;   /* Stops individual cards from stretching vertically */
+    align-content: flex-start; /* Packs multiple rows of cards neatly at the top */
 }
 
 .card {
+    /* The magic flex property to prevent unwanted shrinking */
+    flex: 0 1 320px;
+    /* 0=don't grow larger than max-width, 1=shrink if needed, 320px=base width */
+
     width: 100%;
     max-width: 320px;
+    /* Keeps them from getting too wide on large screens */
     background-color: var(--card-background);
     border-radius: 12px;
     overflow: hidden;
@@ -296,30 +305,31 @@ body {
    Media Queries
    ========================================= */
 @media (max-width: 768px) {
+
     /* Header adjustments */
     .site-header {
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
     }
-    
+
     .nav-list {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
     }
-    
+
     /* Footer adjustments */
     .footer__container {
         flex-direction: column;
         text-align: center;
         align-items: center;
     }
-    
+
     .footer__brand p {
         margin: 0 auto;
     }
-    
+
     .social-list {
         justify-content: center;
     }

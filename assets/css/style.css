@@ -1,64 +1,326 @@
+/* =========================================
+   Variables & Reset
+   ========================================= */
+   :root {
+    --body-background: #F5F5F5;
+    --card-background: bisque;
+    --header-background: #01B7FF;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --btn-background: #000000;
+    
+    --font-logo: "Knewave", system-ui;
+    --font-heading: "Archivo Black", sans-serif;
+    --font-body: "Poppins", sans-serif;
+}
+
 *,
 *::before,
-*::after{
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
+    /* Ensure the body takes up at least the full viewport height 
+       so the footer stays at the bottom on short pages */
+    height: 100%; 
 }
-:root{
-    --primary-background:#8B9A6E;
-    --main-div:#EAE2D6;
+
+body {
+    background-color: var(--body-background);
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-body{
-    background-color: #EAE2D6;
+
+/* =========================================
+   Header & Navigation
+   ========================================= */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-background);
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
-.main-box{
+
+.logo a {
+    text-decoration: none;
+    font-family: var(--font-logo);
+    color: var(--text-light);
+    font-size: 1.75rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--text-light);
+    transition: opacity 0.2s ease;
+}
+
+.nav-list a:hover {
+    opacity: 0.8;
+}
+
+.auth-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: var(--btn-background);
+    color: var(--text-light);
+    border-radius: 20px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 400;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background-color: #333;
+}
+
+/* =========================================
+   Main Content & Card
+   ========================================= */
+.main-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 300px;
-}
-.main-card{
-    background-color: var(--primary-background);
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 10px;
-}
-.fig1{
-    display: flex;
+    /* Removed fixed min-height, flexbox on body handles this now */
+    padding: 3rem 2rem; 
+    flex-grow: 1; /* Pushes footer to the bottom */
 }
 
-.fig .img {
-    height: 200px;
-    object-fit: cover;
-}
-.top{
+.card {
+    width: 100%;
+    max-width: 320px;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
+    flex-direction: column;
 }
-.main-card .pp{
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header */
+.card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem 0.5rem;
+}
+
+.avatar {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-.pp figcaption{
-    margin-left: 10px;
-}
-.fig .ev{
-    height: 100px;
-    width: 200px;
-    margin: 10px 10px 10px 30px;
-    border-radius: 15px;
     object-fit: cover;
-    object-position: 100% 25%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
-.btn{
-    margin-top: 10px;
-    display:flex;
+
+.avatar:hover {
+    transform: scale(1.1);
+}
+
+.card__title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Card Body */
+.card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 1.25rem;
+}
+
+.feature-img {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card__desc {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Text Hover Effect */
+.card__title,
+.card__desc {
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.card__title:hover,
+.card__desc:hover {
+    transform: translateY(-3px);
+}
+
+/* Card Footer / Icons */
+.card__footer {
+    display: flex;
     justify-content: space-between;
-    padding: 0 10px 0 10px;
+    align-items: center;
+    padding: 1rem 1.25rem 1.5rem;
+    margin-top: auto;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-like {
+    color: red;
+}
+
+.btn-share {
+    color: deepskyblue;
+}
+
+.btn-like:hover {
+    color: #ff3b3b;
+    transform: scale(1.2);
+}
+
+.btn-share:hover {
+    color: #3b82f6;
+    transform: scale(1.2);
+}
+
+/* =========================================
+   Site Footer
+   ========================================= */
+.site-footer {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    padding: 3rem 2rem 1rem;
+    width: 100%;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+}
+
+.footer__brand h3 {
+    font-family: var(--font-logo);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--header-background);
+    letter-spacing: 1px;
+}
+
+.footer__brand p {
+    font-size: 0.9rem;
+    max-width: 300px;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.footer__social h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.social-list {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+}
+
+.social-list a {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-list a:hover {
+    color: var(--header-background);
+    transform: translateY(-4px);
+}
+
+.footer__copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* =========================================
+   Media Queries
+   ========================================= */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    /* Footer adjustments */
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footer__brand p {
+        margin: 0 auto;
+    }
+    
+    .social-list {
+        justify-content: center;
+    }
 }

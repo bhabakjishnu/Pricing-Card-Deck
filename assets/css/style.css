@@ -1,14 +1,11 @@
-/* =========================================
-   Variables & Reset
-   ========================================= */
-   :root {
+:root {
     --body-background: #F5F5F5;
     --card-background: bisque;
     --header-background: #01B7FF;
     --text-light: black;
     --text-dark: #333333;
     --btn-background: white;
-    --logo-color:white;
+    --logo-color: white;
     /* New dedicated footer variables added */
     --footer-bg: #333333;
     --footer-text: #ffffff;
@@ -28,8 +25,6 @@
 
 html {
     scroll-behavior: smooth;
-    /* Ensure the body takes up at least the full viewport height 
-       so the footer stays at the bottom on short pages */
     height: 100%;
 }
 
@@ -42,9 +37,6 @@ body {
     min-height: 100vh;
 }
 
-/* =========================================
-   Header & Navigation
-   ========================================= */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -55,7 +47,6 @@ body {
     gap: 1rem;
 }
 
-/* Force logo to take equal side space and align its content to the left */
 .logo {
     flex: 1;
     display: flex;
@@ -70,7 +61,6 @@ body {
     font-size: 1.75rem;
 }
 
-/* The nav will now naturally rest in the exact center */
 .nav-list {
     display: flex;
     list-style: none;
@@ -88,7 +78,6 @@ body {
     opacity: 0.8;
 }
 
-/* Force auth actions to take equal side space and align to the right */
 .auth-actions {
     flex: 1;
     display: flex;
@@ -108,12 +97,9 @@ body {
 
 .btn:hover {
     transform: translateY(-2px);
-    background-color: #e0e0e0; /* adjusted for the white button bg */
+    background-color: #e0e0e0;
 }
 
-/* =========================================
-   Main Content & Card
-   ========================================= */
 .main-content {
     display: flex;
     justify-content: center;
@@ -121,19 +107,15 @@ body {
     gap: 2rem;
     padding: 3rem 2rem;
     flex-grow: 1;
-    
-    align-items: flex-start;   /* Stops individual cards from stretching vertically */
-    align-content: flex-start; /* Packs multiple rows of cards neatly at the top */
+
+    align-items: flex-start;
+    align-content: flex-start;
 }
 
 .card {
-    /* The magic flex property to prevent unwanted shrinking */
     flex: 0 1 320px;
-    /* 0=don't grow larger than max-width, 1=shrink if needed, 320px=base width */
-
     width: 100%;
     max-width: 320px;
-    /* Keeps them from getting too wide on large screens */
     background-color: var(--card-background);
     border-radius: 12px;
     overflow: hidden;
@@ -147,7 +129,6 @@ body {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Card Header */
 .card__header {
     display: flex;
     align-items: center;
@@ -174,7 +155,6 @@ body {
     font-weight: 400;
 }
 
-/* Card Body */
 .card__body {
     display: flex;
     flex-direction: column;
@@ -201,7 +181,6 @@ body {
     line-height: 1.5;
 }
 
-/* Text Hover Effect */
 .card__title,
 .card__desc {
     transition: transform 0.3s ease;
@@ -213,7 +192,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* Card Footer / Icons */
 .card__footer {
     display: flex;
     justify-content: space-between;
@@ -248,9 +226,6 @@ body {
     transform: scale(1.2);
 }
 
-/* =========================================
-   Site Footer
-   ========================================= */
 .site-footer {
     background-color: var(--footer-bg);
     color: var(--footer-text);
@@ -316,20 +291,14 @@ body {
     opacity: 0.6;
 }
 
-/* =========================================
-   Media Queries
-   ========================================= */
 @media (max-width: 768px) {
-
-    /* Header adjustments */
     .site-header {
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
     }
-    
-    /* Reset the side spacing so they stack dead-center on mobile */
-    .logo, 
+
+    .logo,
     .auth-actions {
         justify-content: center;
         flex: unset;
@@ -341,7 +310,6 @@ body {
         gap: 1rem;
     }
 
-    /* Footer adjustments */
     .footer__container {
         flex-direction: column;
         text-align: center;

@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Profile</title>
-
-    <!-- Fonts and Icons -->
+    <title>Developer Services Pricing</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Knewave&family=Poppins:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Knewave&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
     <header class="site-header">
         <div class="logo">
@@ -24,8 +18,8 @@
         <nav class="main-nav">
             <ul class="nav-list">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
+                <li><a href="#">Pricing</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -34,29 +28,57 @@
             <a href="#" class="btn btn--signup">Sign Up</a>
         </div>
     </header>
+
     <main class="main-content">
-        <article class="card">
-            <header class="card__header">
-                <img src="assets/images/Profile-picture.jpg" alt="Developer avatar" class="avatar">
-                <h2 class="card__title">Developer</h2>
-            </header>
-            <figure class="card__body">
-                <img src="assets/images/Profile-picture.jpg" alt="Project preview" class="feature-img">
-                <figcaption class="card__desc">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero numquam nam odit incidunt id. Ipsam
-                    inventore illo quisquam perferendis veniam modi exercitat.
-                </figcaption>
-            </figure>
-            <footer class="card__footer">
-                <button class="icon-btn btn-like" aria-label="Like this profile">
-                    <i class="fa-solid fa-heart"></i>
-                </button>
-                <button class="icon-btn btn-share" aria-label="Share this profile">
-                    <i class="fa-solid fa-share"></i>
-                </button>
-            </footer>
-        </article>
+        <!-- Flex Container -->
+        <section class="pricing-card-deck">
+            
+            <!-- Card 1: Standard Flex -->
+            <article class="card">
+                <header class="card__header">
+                    <h2 class="card__title">Basic Integration</h2>
+                </header>
+                <div class="card__body">
+                    <img src="assets/images/Profile-picture.jpg" alt="Basic package preview" class="feature-img">
+                    <p class="card__desc">Standard front-end development using HTML5 and CSS3. Perfect for static layouts.</p>
+                </div>
+                <footer class="card__footer">
+                    <button class="btn btn--primary">Choose Basic</button>
+                </footer>
+            </article>
+
+            <!-- Card 2: Flex Grow / Align Override -->
+            <article class="card card--featured">
+                <header class="card__header">
+                    <h2 class="card__title">Pro Developer</h2>
+                    <span class="badge">Most Popular</span>
+                </header>
+                <div class="card__body">
+                    <img src="assets/images/Profile-picture.jpg" alt="Pro package preview" class="feature-img">
+                    <p class="card__desc">Advanced Flexbox, native nesting, and modern tooling for responsive, complex web applications.</p>
+                </div>
+                <footer class="card__footer">
+                    <button class="btn btn--primary">Choose Pro</button>
+                </footer>
+            </article>
+
+            <!-- Card 3: Standard Flex -->
+            <article class="card">
+                <header class="card__header">
+                    <h2 class="card__title">Enterprise</h2>
+                </header>
+                <div class="card__body">
+                    <img src="assets/images/Profile-picture.jpg" alt="Enterprise package preview" class="feature-img">
+                    <p class="card__desc">Full-stack architecture, custom CI/CD pipelines, and high-availability setups.</p>
+                </div>
+                <footer class="card__footer">
+                    <button class="btn btn--primary">Choose Enterprise</button>
+                </footer>
+            </article>
+
+        </section>
     </main>
+
     <footer class="site-footer">
         <div class="footer__container">
             <div class="footer__brand">
@@ -77,5 +99,4 @@
         </div>
     </footer>
 </body>
-
 </html>

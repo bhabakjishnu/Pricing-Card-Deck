@@ -1,0 +1,28 @@
+/* ========================================
+   Buttons & UI Components
+   ======================================== */
+
+.btn {
+    text-decoration: none;
+    border: none;
+    background-color: var(--btn-background);
+    color: var(--text-dark);
+    border-radius: 20px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        filter: brightness(0.9);
+    }
+
+    &--primary {
+        background-color: var(--btn-primary);
+        color: var(--text-light);
+        width: 100%;
+        padding-block: 0.75rem;
+    }
+}
+

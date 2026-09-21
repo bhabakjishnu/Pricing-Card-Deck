@@ -169,6 +169,14 @@ Pricing-Card-Deck/
 ├── assets/
 │   ├── css/
 │   │   └── style.css            # Central stylesheet with design tokens & layout rules
+│   │   ├── style.css            # Central entry point importing modular stylesheets
+│   │   ├── variables.css        # Design tokens & CSS custom properties
+│   │   ├── reset.css            # Reset & normalization rules
+│   │   ├── base.css             # Base styles & typography
+│   │   ├── layout.css           # Header, main-content, and footer layout
+│   │   ├── components.css       # Buttons & reusable UI elements
+│   │   ├── pricing.css          # Pricing cards & flex deck structure
+│   │   └── responsive.css       # Media queries & responsive overrides
 │   └── images/
 │       └── Profile-picture.jpg  # Feature package preview asset
 ├── index.html                   # Semantic markup entry point
@@ -208,6 +216,7 @@ No special build tools, compilers, or package managers are required. You only ne
 ## 🎨 Customization Guide
 
 You can completely alter the visual theme by tweaking the design tokens inside [assets/css/style.css](assets/css/style.css):
+You can completely alter the visual theme by tweaking the design tokens inside [assets/css/variables.css](assets/css/variables.css):
 
 ```css
 :root {

@@ -1,0 +1,13 @@
+/* ========================================
+   Base & Typography
+   ======================================== */
+
+body {
+    background-color: var(--body-background);
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh; /* 2026 standard: Small Viewport Height prevents mobile UI jumping */
+}
+

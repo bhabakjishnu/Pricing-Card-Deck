@@ -1,0 +1,20 @@
+/* ========================================
+   Design Tokens & CSS Custom Properties
+   ======================================== */
+
+:root {
+    --body-background: #F5F5F5;
+    --card-background: bisque;
+    --card-featured-bg: #ffe4c4;
+    --header-background: #01B7FF;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --btn-background: #ffffff;
+    --btn-primary: #01B7FF;
+    --footer-bg: #333333;
+    
+    --font-logo: "Knewave", system-ui;
+    --font-heading: "Archivo Black", sans-serif;
+    --font-body: "Poppins", sans-serif;
+}
+

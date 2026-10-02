@@ -1,20 +1,82 @@
-/* ========================================
+/* ==========================================================================
    Design Tokens & CSS Custom Properties
-   ======================================== */
+   Project: Responsive Developer Pricing Card Deck
+   Architecture: Pure CSS3, Semantic Theme Tokens, WCAG 2.1 AA Compliant
+   ========================================================================== */
 
 :root {
-    --body-background: #F5F5F5;
-    --card-background: bisque;
-    --card-featured-bg: #ffe4c4;
-    --header-background: #01B7FF;
-    --text-light: #ffffff;
-    --text-dark: #333333;
-    --btn-background: #ffffff;
-    --btn-primary: #01B7FF;
-    --footer-bg: #333333;
-    
-    --font-logo: "Knewave", system-ui;
-    --font-heading: "Archivo Black", sans-serif;
-    --font-body: "Poppins", sans-serif;
-}
+    /* --- Canvas & Surface Colors (Dark High-Tech Glassmorphism) --- */
+    --bg-canvas: #090d16;
+    --bg-surface: #0f172a;
+    --bg-card: rgba(15, 23, 42, 0.82);
+    --bg-card-featured: linear-gradient(180deg, rgba(20, 32, 60, 0.95) 0%, rgba(12, 18, 36, 0.98) 100%);
+    --bg-header: rgba(9, 13, 22, 0.85);
+    --bg-footer: #070a10;
+    --bg-pill: rgba(255, 255, 255, 0.06);
 
+    /* --- Accent & Brand Palette --- */
+    --accent-cyan: #00f0ff;
+    --accent-cyan-rgb: 0, 240, 255;
+    --accent-blue: #3b82f6;
+    --accent-indigo: #6366f1;
+    --accent-purple: #a855f7;
+    --accent-emerald: #10b981;
+    --accent-amber: #f59e0b;
+
+    /* --- Gradient Presets --- */
+    --grad-primary: linear-gradient(135deg, #00f0ff 0%, #3b82f6 50%, #6366f1 100%);
+    --grad-featured-badge: linear-gradient(135deg, #00f0ff 0%, #38bdf8 100%);
+    --grad-text: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+    --grad-text-cyan: linear-gradient(135deg, #00f0ff 0%, #a855f7 100%);
+
+    /* --- Borders & Outlines --- */
+    --border-subtle: rgba(255, 255, 255, 0.09);
+    --border-card: rgba(148, 163, 184, 0.14);
+    --border-featured: #00f0ff;
+    --border-highlight: rgba(0, 240, 255, 0.45);
+
+    /* --- Typography Tokens --- */
+    --font-logo: "Knewave", system-ui, cursive;
+    --font-heading: "Archivo Black", sans-serif;
+    --font-body: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    /* --- Text Hierarchies --- */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --text-inverted: #090d16;
+
+    /* --- Button Tokens --- */
+    --btn-primary-bg: var(--grad-primary);
+    --btn-primary-text: #090d16;
+    --btn-secondary-bg: rgba(255, 255, 255, 0.08);
+    --btn-secondary-hover: rgba(255, 255, 255, 0.16);
+    --btn-secondary-text: #f8fafc;
+
+    /* --- Elevational Shadows & Glows --- */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-card: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+    --shadow-card-hover: 0 30px 60px -15px rgba(0, 0, 0, 0.85);
+    --glow-featured: 0 0 40px rgba(0, 240, 255, 0.22), 0 0 80px rgba(99, 102, 241, 0.15);
+    --glow-badge: 0 0 16px rgba(0, 240, 255, 0.4);
+
+    /* --- Radii & Transitions --- */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-full: 9999px;
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* --- Backwards-Compatible Tokens (preserving original references) --- */
+    --body-background: var(--bg-canvas);
+    --card-background: var(--bg-card);
+    --card-featured-bg: var(--bg-card-featured);
+    --header-background: var(--bg-header);
+    --text-light: var(--text-primary);
+    --text-dark: var(--text-primary);
+    --btn-background: var(--btn-secondary-bg);
+    --btn-primary: var(--accent-cyan);
+    --footer-bg: var(--bg-footer);
+}

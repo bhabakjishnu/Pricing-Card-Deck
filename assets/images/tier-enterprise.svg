@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGradEnt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="entPurpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <filter id="glowEnt" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Card Canvas -->
+  <rect width="320" height="180" rx="12" fill="url(#bgGradEnt)" />
+  <rect width="318" height="178" x="1" y="1" rx="11" stroke="#818cf8" stroke-opacity="0.3" stroke-width="1.5" />
+
+  <!-- Global Orbital Rings -->
+  <ellipse cx="160" cy="90" rx="110" ry="45" stroke="#6366f1" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4 4" transform="rotate(-15 160 90)" />
+  <ellipse cx="160" cy="90" rx="90" ry="35" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" transform="rotate(25 160 90)" />
+
+  <!-- Central Cloud Infrastructure Core -->
+  <circle cx="160" cy="90" r="42" fill="#1e1b4b" stroke="url(#entPurpleGrad)" stroke-width="2" filter="url(#glowEnt)" />
+  
+  <!-- Server / Shield Nodes -->
+  <path d="M160 68 L178 78 V98 L160 108 L142 98 V78 Z" fill="#0f172a" stroke="#c084fc" stroke-width="2" />
+  <circle cx="160" cy="88" r="6" fill="#00f0ff" filter="url(#glowEnt)" />
+
+  <!-- Satellite Nodes -->
+  <!-- Node 1: Left Cloud -->
+  <circle cx="75" cy="75" r="14" fill="#0f172a" stroke="#818cf8" stroke-width="1.5" />
+  <line x1="89" y1="78" x2="142" y2="85" stroke="#818cf8" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="3 3" />
+  <path d="M70 76 a4 4 0 0 1 7 -2 a5 5 0 0 1 8 3 a3 3 0 0 1 -1 5 h-14 z" fill="#818cf8" />
+
+  <!-- Node 2: Right Database Cluster -->
+  <circle cx="245" cy="105" r="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+  <line x1="231" y1="102" x2="178" y2="95" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="3 3" />
+  <!-- Database Disks -->
+  <ellipse cx="245" cy="100" rx="6" ry="2" fill="#38bdf8" />
+  <ellipse cx="245" cy="105" rx="6" ry="2" fill="#38bdf8" />
+  <ellipse cx="245" cy="110" rx="6" ry="2" fill="#38bdf8" />
+
+  <!-- Node 3: Top CI/CD Deployment -->
+  <circle cx="160" cy="30" r="12" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+  <line x1="160" y1="42" x2="160" y2="68" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.6" stroke-dasharray="3 3" />
+  <path d="M156 30 L160 26 L164 30 M160 26 V34" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- High Availability Pill -->
+  <g transform="translate(195, 20)">
+    <rect width="90" height="22" rx="11" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+    <text x="45" y="15" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">99.99% SLA</text>
+  </g>
+</svg>

@@ -3,7 +3,7 @@
 <div align="center">
 
   <p align="center">
-    A high-converting, accessible <strong>Developer Services Pricing Deck</strong> crafted with semantic HTML5 and modern CSS3. Engineered with advanced Flexbox layout mechanics, native CSS nesting, CSS custom properties, and responsive design patterns with zero external JavaScript or heavy frameworks.
+    A high-converting, accessible <strong>Developer Services Pricing Deck</strong> crafted with semantic HTML5, modern modular CSS3, and lightweight vanilla JavaScript. Engineered with advanced Flexbox layout mechanics, native CSS nesting, CSS custom properties, and responsive design patterns with zero external frameworks.
   </p>
 
   <p align="center">
@@ -17,8 +17,9 @@
   <p align="center">
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-    <img src="https://img.shields.io/badge/Flexbox-Advanced%20Deck-01B7FF?style=for-the-badge&logo=css3&logoColor=white" alt="Flexbox" />
-    <img src="https://img.shields.io/badge/Architecture-Zero--Dependency-success?style=for-the-badge" alt="Architecture" />
+    <img src="https://img.shields.io/badge/Flexbox-Advanced%20Deck-00F0FF?style=for-the-badge&logo=css3&logoColor=white" alt="Flexbox" />
+    <img src="https://img.shields.io/badge/Security-Hardened%20(CSP%20%2B%20SRI)-success?style=for-the-badge" alt="Security" />
+    <img src="https://img.shields.io/badge/A11y-WCAG%202.1%20AA-green?style=for-the-badge" alt="Accessibility" />
     <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License" />
   </p>
 
@@ -35,6 +36,7 @@
 ## 📑 Table of Contents
 
 - [Overview](#-overview)
+- [10-Phase Engineering Lifecycle](#-10-phase-engineering-lifecycle)
 - [Key Features](#-key-features)
 - [Technology Stack](#-technology-stack)
 - [System & Layout Architecture](#-system--layout-architecture)
@@ -48,7 +50,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation & Local Execution](#installation--local-execution)
 - [Customization Guide](#-customization-guide)
-- [Security Audit & Hardening](#-security-audit--hardening)
+- [Security Audit & Hardening Status](#-security-audit--hardening-status)
 - [Browser Compatibility](#-browser-compatibility)
 - [Contributing](#-contributing)
 - [License](#-license)
@@ -61,31 +63,47 @@
 The **Responsive Pricing Card Deck** is an engineered developer services pricing interface designed for software agencies, consultants, and SaaS applications. It delivers an intuitive visual hierarchy that directs prospective clients toward high-value tiers, spotlighting the **"Pro Developer"** tier as the prime conversion target.
 
 ### Problem Solved
-Traditional pricing pages frequently depend on heavyweight UI frameworks (Bootstrap, Tailwind) or JavaScript-driven height-matching libraries. This project demonstrates how modern CSS standards—specifically Flexbox growth weighting, native nesting, logical properties, and small viewport height units—solve layout alignment, responsive re-wrapping, and vertical button pinning with zero runtime JavaScript overhead.
+Traditional pricing pages frequently depend on heavyweight UI frameworks (Bootstrap, Tailwind) or JavaScript-driven height-matching libraries. This project demonstrates how modern web standards—specifically Flexbox growth weighting, native nesting, logical properties, and small viewport height units—solve layout alignment, responsive re-wrapping, and vertical button pinning with zero runtime framework overhead.
 
-### Target Use Cases
-- **Agencies & Freelance Developers:** Plug-and-play pricing component for service offerings and portfolio sites.
-- **Frontend Engineers:** Reference architecture for CSS-only flexible deck mechanics, design token management, and modern browser standards.
+---
+
+## 🔄 10-Phase Engineering Lifecycle
+
+This codebase adheres to a rigorous, disciplined engineering workflow:
+
+| Phase | Milestone | Execution Deliverable |
+| :--- | :--- | :--- |
+| **1. Understand** | Requirements & Constraints | Established scope: zero-framework dependency, pure flexbox weighting, accessible landmarks. |
+| **2. Inspect** | Codebase & Asset Audit | Identified broken CDN links, CSS `@import` ordering, reused profile image, missing repo hygiene. |
+| **3. Plan** | Architectural Roadmap | Mapped modular stylesheet pipeline, interactive billing state machine, and SVG design specs. |
+| **4. Design** | Visual Design System | Formulated high-tech dark obsidian theme (`#090D16`), glowing cyan accents, and bespoke vector illustrations. |
+| **5. Implement** | Engineering Implementation | Built modular CSS, semantic HTML5, interactive billing switch, toast feedback, and drawer menu. |
+| **6. Test** | Multi-Device Browser Testing | Visual and functional validation across Mobile (375px), Tablet (768px), and Desktop (1200px+). |
+| **7. Review** | Code Quality & A11y Audit | Enforced BEM conventions, W3C standards compliance, and WCAG 2.1 AA contrast ratios. |
+| **8. Secure** | Hardening & Protection | Added Subresource Integrity (SRI), Content Security Policy (CSP), `rel="noopener noreferrer"`, and `.gitignore`. |
+| **9. Document** | Technical Specs & Guides | Comprehensive documentation, Mermaid diagrams, token tables, and deployment instructions. |
+| **10. Release** | Production Readiness | Clean repository state, verified MIT License, and production-ready static assets. |
 
 ---
 
 ## ✨ Key Features
 
 ### Core Layout Features
-- **Visual Conversion Anchor:** The featured "Pro Developer" card stands out through prioritized flex basis, distinct background accents, a "Most Popular" badge, and full-height vertical stretch.
+- **Visual Conversion Anchor:** The featured "Pro Developer" card stands out through prioritized flex basis (`flex: 2 0 340px`), vibrant cyan gradient borders, a "Most Popular" badge, and full-height vertical stretch (`align-self: stretch`).
 - **Deck-Level Alignment:** Automated flex re-wrapping (`flex-wrap: wrap`) gracefully handles fluid viewport transitions across mobile, tablet, and widescreen displays.
-- **Equalized Call-To-Action (CTA) Pinning:** Utilizes CSS `margin-block-start: auto` on card footers to guarantee all action buttons remain horizontally aligned across varying body copy lengths.
+- **Equalized Call-To-Action (CTA) Pinning:** Utilizes CSS `margin-block-start: auto` on card footers to guarantee all action buttons remain horizontally aligned across varying feature list lengths.
+
+### Interactive UX Features
+- **Dynamic Billing Switcher:** Segmented control for toggling between Monthly and Annual billing (with a dynamic 20% discount subtext and smooth price updates).
+- **Interactive Toast Notifications:** Real-time feedback when selecting any plan tier, displaying plan names and billing cycle confirmation.
+- **Mobile Navigation Drawer:** Responsive slide-out navigation menu for mobile screens with keyboard `Escape` closing support.
+- **FAQ Accordion:** Pure semantic `<details>` and `<summary>` disclosure components for rapid developer onboarding.
 
 ### Technical & Architectural Features
-- **Zero Framework Dependency:** Pure HTML5 and vanilla CSS3—no JavaScript runtime overhead, no CSS compilation step, and zero third-party tracking scripts.
+- **Zero Framework Dependency:** Pure HTML5, vanilla CSS3, and lightweight vanilla JS—no build tools or heavy runtimes required.
 - **Native CSS Nesting:** Written directly using the W3C native CSS nesting standard (`& selector`), eliminating the need for preprocessors like Sass or Less.
 - **Modern Logical Properties:** Full adoption of `padding-block`, `padding-inline`, and `margin-block-start` for modern layout flow and internationalization readiness.
 - **Elimination of Mobile Viewport Jumps:** Uses `min-height: 100svh` (Small Viewport Height) to prevent abrupt visual jumps caused by dynamic mobile address bars.
-
-### UX & Accessibility (A11y) Features
-- **Semantic Landmark Hierarchy:** Built with `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>` elements for screen reader navigation.
-- **Accessible Icon Links:** Footer social navigation links contain explicit `aria-label` attributes (`Visit our GitHub`, `Visit our LinkedIn`, `Visit our Twitter`) ensuring full screen reader accessibility.
-- **Hardware-Accelerated Interactions:** Subtle micro-interactions (`translateY` and brightness filters) powered by GPU compositor layers for silky 60fps transitions.
 
 ---
 
@@ -95,9 +113,10 @@ Traditional pricing pages frequently depend on heavyweight UI frameworks (Bootst
 | :--- | :--- | :--- | :--- |
 | **Markup** | HTML5 (Semantic Standard) | Native W3C Standard | Page structure, semantic landmarks, and accessibility anchors |
 | **Styling** | CSS3 (Custom Properties, Flexbox, Nesting) | Native W3C Standard | Fluid layout, responsive design tokens, and hover micro-interactions |
+| **Interactivity** | Vanilla JavaScript (ES6+) | Native Browser Engine | Billing calculations, mobile menu, toast notifications, keyboard a11y |
 | **Typography** | Google Fonts (*Archivo Black*, *Knewave*, *Poppins*) | `fonts.googleapis.com` | Brand identity, card headers, and readable body typography |
-| **Iconography** | Font Awesome 6.4.0 (Free CDN) | `cdnjs.cloudflare.com` | Social icons in the site footer |
-| **Execution Engine** | Any Modern Web Browser | Client Runtime | Renders static markup and styles with zero build pipeline |
+| **Iconography** | Font Awesome 6.4.0 (SRI Hardened) | `cdnjs.cloudflare.com` | Social icons and UI feature checkmarks |
+| **Vector Assets** | Custom Scalable Vector Graphics (SVG) | Local (`assets/images/`) | Bespoke architecture illustrations for Basic, Pro, and Enterprise tiers |
 
 ---
 
@@ -105,50 +124,50 @@ Traditional pricing pages frequently depend on heavyweight UI frameworks (Bootst
 
 ### Mermaid Architecture & Workflow
 
-The diagram below illustrates the DOM hierarchy, CSS token flow, and layout rendering mechanics:
-
 ```mermaid
 flowchart TD
     subgraph BrowserRuntime["Browser Client Runtime"]
         HTML["index.html\n(Semantic Document Structure)"]
+        JS["assets/js/main.js\n(Billing Switcher, Mobile Drawer, Toast)"]
         
-        subgraph ExternalAssets["External CDN Assets"]
-            GF[Google Fonts: Poppins, Archivo Black, Knewave]
-            FA[Font Awesome 6.4.0 Icons]
+        subgraph ExternalAssets["External Secure CDN Assets"]
+            GF["Google Fonts: Poppins, Archivo Black, Knewave"]
+            FA["Font Awesome 6.4.0 (SRI Verified)"]
         end
 
         subgraph StylePipeline["CSS Design System (assets/css/)"]
-            Vars["variables.css\n(:root Design Tokens)"]
-            Reset["reset.css\n(Box-sizing & Scroll Reset)"]
-            Base["base.css\n(100svh & Body Typography)"]
-            Layout["layout.css\n(Header & Footer Flexboxes)"]
-            Components["components.css\n(.btn & Pill UI Styling)"]
-            Pricing["pricing.css\n(.pricing-card-deck & .card)"]
+            Master["style.css\n(Master Entry Point with @import Pipeline)"]
+            Vars["variables.css\n(Design Tokens & Palettes)"]
+            Reset["reset.css\n(Box-sizing & Focus Reset)"]
+            Base["base.css\n(100svh & Ambient Lighting)"]
+            Layout["layout.css\n(Sticky Header, Hero, Trust, Footer)"]
+            Components["components.css\n(Buttons, Toggle, Badges, Toast)"]
+            Pricing["pricing.css\n(Card Deck Flexbox & Featured Overrides)"]
             Resp["responsive.css\n(Media Queries Level 4)"]
-            Master["style.css\n(Consolidated Master Stylesheet)"]
         end
 
         subgraph DOMStructure["Rendered Document Structure"]
-            Header["site-header (Logo, Navigation, Auth Actions)"]
+            Header["site-header (Logo, Navigation, Auth, Menu Toggle)"]
+            Hero["section.hero-section (Hero Title & Billing Switcher)"]
             Deck["section.pricing-card-deck (Flex Container)"]
+            Trust["section.trust-section (Tech Stack Badges)"]
+            FAQ["section.faq-section (Semantic Details Accordion)"]
             Footer["site-footer (Brand Info, Social Icons, Copyright)"]
             
-            Card1["article.card: Basic Integration\n(flex: 1 1 300px)"]
-            Card2["article.card.card--featured: Pro Developer\n(flex: 2 0 340px | align-self: stretch)"]
-            Card3["article.card: Enterprise\n(flex: 1 1 300px)"]
+            Card1["article.card: Basic Integration\n(flex: 1 1 300px | $29/mo)"]
+            Card2["article.card.card--featured: Pro Developer\n(flex: 2 0 340px | align-self: stretch | $79/mo)"]
+            Card3["article.card: Enterprise\n(flex: 1 1 300px | $199/mo)"]
         end
     end
 
     HTML --> GF
     HTML --> FA
     HTML --> Master
-    Master -.-> Vars & Reset & Base & Layout & Components & Pricing & Resp
-    HTML --> Header
-    HTML --> Deck
-    HTML --> Footer
-    Deck --> Card1
-    Deck --> Card2
-    Deck --> Card3
+    HTML --> JS
+    Master --> Vars & Reset & Base & Layout & Components & Pricing & Resp
+    HTML --> Header & Hero & Deck & Trust & FAQ & Footer
+    Deck --> Card1 & Card2 & Card3
+    JS -.-> Hero & Deck
 ```
 
 ---
@@ -164,7 +183,7 @@ The card deck employs three synchronized Flexbox properties to achieve a balance
     flex-wrap: wrap;
     gap: 2rem;
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     align-items: center; /* Centers non-featured cards vertically */
     justify-content: center;
 }
@@ -195,52 +214,13 @@ The card deck employs three synchronized Flexbox properties to achieve a balance
 
 ---
 
-### Native CSS Nesting
-
-The stylesheets leverage native W3C CSS Nesting, improving code locality without preprocessors:
-
-```css
-.card {
-    background-color: var(--card-background);
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-```
-
----
-
-### Logical Properties & Modern Viewport Units
-
-- **`100svh` (Small Viewport Height):** Guarantees the body container occupies the true minimum viewport height, avoiding layout recalculations when mobile browser navigation bars show or hide.
-- **CSS Logical Properties:** Uses `padding-block`, `padding-inline`, and `margin-block-start` instead of physical top/bottom/left/right properties, ensuring intrinsic alignment for international writing modes.
-- **Media Queries Level 4 Range Syntax:** Simplifies viewport queries using intuitive mathematical operators:
-  ```css
-  @media (width <= 768px) {
-      .site-header { flex-direction: column; }
-      .footer__container { flex-direction: column; align-items: center; }
-  }
-  ```
-
----
-
 ## 📦 Tier Specifications
 
-| Tier | Target Client | Highlight | Flex Specification | Sizing Behavior |
-| :--- | :--- | :--- | :--- | :--- |
-| **Basic Integration** | Startups & Static Sites | HTML5 & CSS3 static layout delivery | `flex: 1 1 300px` | Scales evenly; shrinks when viewport contracts |
-| ⭐ **Pro Developer** *(Featured)* | High-growth applications | Modern CSS, component architecture & tooling | `flex: 2 0 340px` + `align-self: stretch` | Grows twice as fast; never shrinks below 340px; stretches full deck height |
-| **Enterprise** | Large Scale Organizations | Full-stack architecture, custom CI/CD & scalability | `flex: 1 1 300px` | Scales evenly; shrinks when viewport contracts |
+| Tier | Monthly Rate | Annual Rate (-20%) | Target Client | Highlight Feature | Flex Specification |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Basic Integration** | `$29` / mo | `$23` / mo | Startups & Static Sites | Clean HTML5/CSS3 static architecture | `flex: 1 1 300px` |
+| ⭐ **Pro Developer** *(Featured)* | `$79` / mo | `$63` / mo | High-growth applications | Modern CSS, design tokens & priority support | `flex: 2 0 340px` + `align-self: stretch` |
+| **Enterprise** | `$199` / mo | `$159` / mo | Scale Organizations | Full-stack architecture & 99.99% SLA | `flex: 1 1 300px` |
 
 ---
 
@@ -248,20 +228,27 @@ The stylesheets leverage native W3C CSS Nesting, improving code locality without
 
 ```text
 Pricing-Card-Deck/
+├── .gitignore                   # Git exclusion rules for OS files, IDE configs & dependencies
 ├── assets/
 │   ├── css/
-│   │   ├── base.css             # Base body styles, 100svh viewport, and typography defaults
-│   │   ├── components.css       # Reusable button styles (.btn, .btn--primary) and hover states
-│   │   ├── layout.css           # Header, navigation, main wrapper, and footer flexbox rules
-│   │   ├── pricing.css          # Pricing card deck grid, flex basis weights, and featured card rules
+│   │   ├── base.css             # Base body styles, 100svh viewport, and ambient lighting
+│   │   ├── components.css       # Buttons, billing switch, discount pill, and toast component
+│   │   ├── layout.css           # Sticky header, hero section, trust strip, and footer
+│   │   ├── pricing.css          # Pricing card deck flexbox, basis weights, and featured overrides
 │   │   ├── reset.css            # Universal box-sizing reset and smooth scrolling behavior
 │   │   ├── responsive.css       # Media Queries Level 4 syntax for mobile screen breakpoints
 │   │   ├── style.css            # Consolidated master stylesheet linking all component styles
 │   │   └── variables.css        # Design tokens: palette colors and typography custom properties
-│   └── images/
-│       ├── Profile-picture.jpg  # Feature package preview illustration for pricing cards
-│       └── desktop-preview.png  # High-resolution desktop screenshot of the rendered application
+│   ├── images/
+│   │   ├── desktop-preview.png  # High-resolution desktop screenshot of the rendered application
+│   │   ├── Profile-picture.jpg  # Profile photograph asset
+│   │   ├── tier-basic.svg       # Custom vector SVG illustration for Basic tier
+│   │   ├── tier-enterprise.svg  # Custom vector SVG illustration for Enterprise tier
+│   │   └── tier-pro.svg         # Custom vector SVG illustration for Pro Developer tier
+│   └── js/
+│       └── main.js              # Vanilla JS for billing toggle, mobile drawer, and toast feedback
 ├── index.html                   # Semantic HTML5 entry point with accessible landmark markup
+├── LICENSE                      # Official MIT License
 └── README.md                    # Technical documentation, architecture, and security audit report
 ```
 
@@ -291,30 +278,22 @@ Because this project is built entirely on native web standards, no compilation s
      ```bash
      npx serve .
      ```
-   - **Using Python (Optional):**
-     ```bash
-     python -m http.server 8000
-     ```
 
 ---
 
 ## 🎨 Customization Guide
 
-All brand aesthetics, color palettes, and typography configurations are centralized in CSS Custom Properties inside `:root`. To adapt the project to your brand identity, update the tokens in `assets/css/variables.css` (or `assets/css/style.css`):
+All brand aesthetics, color palettes, and typography configurations are centralized in CSS Custom Properties inside `:root`. To adapt the project to your brand identity, update the tokens in `assets/css/variables.css`:
 
 ```css
 :root {
     /* Color Palette */
-    --body-background: #F5F5F5;        /* Page background canvas */
-    --card-background: bisque;         /* Standard card background */
-    --card-featured-bg: #ffe4c4;       /* Featured card highlight tint */
-    --header-background: #01B7FF;      /* Primary accent blue */
-    --text-light: #ffffff;             /* Contrasting light text */
-    --text-dark: #333333;              /* Primary body text */
-    --btn-background: #ffffff;         /* Secondary button background */
-    --btn-primary: #01B7FF;            /* Primary action button fill */
-    --footer-bg: #333333;              /* Dark footer background */
-    
+    --bg-canvas: #090d16;              /* Dark canvas background */
+    --bg-card: rgba(15, 23, 42, 0.82); /* Glassmorphic card surface */
+    --accent-cyan: #00f0ff;            /* Primary brand accent */
+    --accent-indigo: #6366f1;          /* Secondary purple accent */
+    --accent-emerald: #10b981;         /* Success/check accent */
+
     /* Typography Tokens */
     --font-logo: "Knewave", system-ui;         /* Decorative brand logo font */
     --font-heading: "Archivo Black", sans-serif; /* Impactful card header font */
@@ -324,59 +303,15 @@ All brand aesthetics, color palettes, and typography configurations are centrali
 
 ---
 
-## 🔒 Security Audit & Hardening
+## 🔒 Security Audit & Hardening Status
 
-A comprehensive security audit of this repository verified that **no secrets, API keys, credentials, or personal information are stored or committed**. Because the application is a client-side static presentation page with zero backend or user input handling, attack vectors such as SQL Injection, CSRF, and Server-Side Deserialization do not apply.
-
-However, the following hardening steps are recommended:
-
-### 1. Subresource Integrity (SRI) for External CDN Assets
-The Font Awesome stylesheet loaded in `index.html` currently lacks an `integrity` cryptographic hash. Implementing Subresource Integrity ensures the browser rejects the stylesheet if the CDN delivery is tampered with:
-
-```html
-<!-- Recommended Secure External Link -->
-<link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
-```
-
-### 2. Content Security Policy (CSP)
-For production deployments, enforce a strict Content Security Policy to control allowed sources:
-
-```html
-<meta http-equiv="Content-Security-Policy" content="
-    default-src 'none';
-    style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
-    font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
-    img-src 'self' data:;
-    base-uri 'self';
-    form-action 'self';
-">
-```
-
-### 3. Repository Hygiene (.gitignore)
-To prevent accidental future commits of OS artifacts, IDE directories, or sensitive configuration files, add a `.gitignore` to the project root:
-
-```text
-# OS Metadata
-.DS_Store
-Thumbs.db
-
-# Editor & IDE Directories
-.vscode/
-.idea/
-
-# Environment & Local Overrides
-*.env
-*.env.local
-
-# Node & Build Artifacts (if added in the future)
-node_modules/
-npm-debug.log*
-```
+| Security Control | Implementation Status | Details |
+| :--- | :--- | :--- |
+| **Subresource Integrity (SRI)** | ✅ Implemented | Font Awesome 6.4.0 uses cryptographic sha512 hash verification. |
+| **Content Security Policy (CSP)** | ✅ Implemented | Restricts script, style, font, and frame origins to authorized CDNs and `'self'`. |
+| **Anchor Hardening** | ✅ Implemented | All external links specify `target="_blank"` with `rel="noopener noreferrer"`. |
+| **Repository Hygiene** | ✅ Implemented | Comprehensive `.gitignore` prevents OS files and secrets from reaching version control. |
+| **Dependency Risks** | ✅ Zero Risk | Pure vanilla architecture with zero vulnerable third-party npm packages. |
 
 ---
 
@@ -417,7 +352,7 @@ Contributions are welcomed! Follow these standard open-source steps:
 
 ## 📄 License
 
-This project is distributed under the **MIT License**. For full terms, please refer to the project's license documentation.
+This project is distributed under the **MIT License**. For full terms, please refer to the [LICENSE](LICENSE) file.
 
 ---
 
@@ -428,5 +363,5 @@ This project is distributed under the **MIT License**. For full terms, please re
 - **Repository:** [Pricing-Card-Deck](https://github.com/bhabakjishnu/Pricing-Card-Deck)
 
 <div align="center">
-  <sub>Engineered with semantic web standards. If this project was useful to you, please consider starring ⭐ the repository!</sub>
+  <sub>Engineered with semantic web standards and disciplined 10-phase execution. If this project was useful to you, please consider starring ⭐ the repository!</sub>
 </div>

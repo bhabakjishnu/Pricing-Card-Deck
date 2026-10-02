@@ -4,104 +4,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Services Pricing</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="High-converting, accessible Developer Services Pricing Card Deck crafted with semantic HTML5 and modern CSS3 advanced flexbox layout.">
+    <meta name="theme-color" content="#090d16">
+    <title>Developer Services Pricing | Modern CSS Flexbox Deck</title>
+
+    <!-- Content Security Policy (Hardened Client Security) -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'none';
+        style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+        font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        script-src 'self' 'unsafe-inline';
+        base-uri 'self';
+        form-action 'self';
+    ">
+
+    <!-- Subresource Integrity (SRI) for Font Awesome 6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Typography: Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Knewave&family=Poppins:wght@400;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Knewave&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Master Modular Stylesheet Pipeline -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <!-- Site Header -->
     <header class="site-header">
         <div class="logo">
-            <a href="#">DevLogo</a>
+            <a href="#" aria-label="DevLogo Homepage">Dev<span class="logo-dot">Logo</span></a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Main Navigation">
             <ul class="nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#pricing" class="active">Pricing</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tech-stack">Stack</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
         <div class="auth-actions">
             <a href="#" class="btn btn--login">Log In</a>
             <a href="#" class="btn btn--signup">Sign Up</a>
         </div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
-    <main class="main-content">
-        <!-- Flex Container -->
-        <section class="pricing-card-deck">
 
-            <!-- Card 1: Standard Flex -->
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="mobile-nav" aria-label="Mobile Navigation Drawer">
+        <ul class="mobile-nav-list">
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#tech-stack">Stack</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <div class="mobile-auth">
+            <a href="#" class="btn btn--login">Log In</a>
+            <a href="#" class="btn btn--signup">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="pricing">
+            <div class="eyebrow-badge">
+                <i class="fa-solid fa-bolt"></i> 2026 Developer Rates
+            </div>
+            <h1 class="hero-title">
+                Simple, Predictable <span class="gradient-span">Developer Pricing</span>
+            </h1>
+            <p class="hero-subtitle">
+                Engineered with advanced CSS Flexbox mechanics, native nesting, and zero runtime dependencies. Choose the tier engineered for your stack.
+            </p>
+
+            <!-- Billing Cycle Switcher -->
+            <div class="billing-switcher-wrapper" role="group" aria-label="Billing cycle switcher">
+                <span id="option-monthly" class="billing-option active">Monthly</span>
+                <label class="toggle-switch" for="billing-toggle">
+                    <input type="checkbox" id="billing-toggle" aria-label="Toggle annual billing discount">
+                    <span class="slider"></span>
+                </label>
+                <span id="option-annual" class="billing-option">Annual</span>
+                <span class="discount-pill">Save 20%</span>
+            </div>
+        </section>
+
+        <!-- Advanced Flexbox Pricing Card Deck -->
+        <section class="pricing-card-deck" aria-label="Developer Pricing Tiers">
+
+            <!-- Card 1: Basic Integration (Standard Flex: flex: 1 1 300px) -->
             <article class="card">
                 <header class="card__header">
                     <h2 class="card__title">Basic Integration</h2>
                 </header>
+                <div class="card__pricing">
+                    <span class="currency">$</span>
+                    <span class="amount">29</span>
+                    <span class="period">/month</span>
+                    <span class="annual-note" style="display: none;"></span>
+                </div>
                 <div class="card__body">
-                    <img src="assets/images/Profile-picture.jpg" alt="Basic package preview" class="feature-img">
-                    <p class="card__desc">Standard front-end development using HTML5 and CSS3. Perfect for static
-                        layouts.</p>
+                    <img src="assets/images/tier-basic.svg" alt="Basic Integration architecture preview" class="feature-img">
+                    <p class="card__desc">
+                        Clean semantic HTML5 and modern CSS3 architecture. Ideal for static landing pages, portfolios, and rapid MVPs.
+                    </p>
+                    <ul class="card__features">
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span>Responsive <strong>Flexbox & Grid</strong> Layout</span></li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span>W3C Standard Semantic Markup</span></li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span>Cross-Browser Compatibility</span></li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span>Git Version Controlled Delivery</span></li>
+                        <li class="feature-item muted"><i class="fa-solid fa-xmark"></i> <span>Dedicated Slack Channel</span></li>
+                    </ul>
                 </div>
                 <footer class="card__footer">
-                    <button class="btn btn--primary">Choose Basic</button>
+                    <button class="btn btn--outline" id="btn-basic">Choose Basic</button>
                 </footer>
             </article>
-            <!-- Card 2: Flex Grow / Align Override -->
+
+            <!-- Card 2: Pro Developer (Featured: flex: 2 0 340px, align-self: stretch) -->
             <article class="card card--featured">
                 <header class="card__header">
                     <h2 class="card__title">Pro Developer</h2>
                     <span class="badge">Most Popular</span>
                 </header>
+                <div class="card__pricing">
+                    <span class="currency">$</span>
+                    <span class="amount">79</span>
+                    <span class="period">/month</span>
+                    <span class="annual-note" style="display: none;"></span>
+                </div>
                 <div class="card__body">
-                    <img src="assets/images/Profile-picture.jpg" alt="Pro package preview" class="feature-img">
-                    <p class="card__desc">Advanced Flexbox, native nesting, and modern tooling for responsive, complex
-                        web applications.</p>
+                    <img src="assets/images/tier-pro.svg" alt="Pro Developer architecture preview" class="feature-img">
+                    <p class="card__desc">
+                        Advanced Flexbox, native nesting, custom design tokens, and modern tooling for responsive, high-growth web applications.
+                    </p>
+                    <ul class="card__features">
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span><strong>All Basic Features</strong> Included</span></li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span>Native CSS Nesting & Design Tokens</span></li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span>Micro-Interactions & GPU Transitions</span></li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span>WCAG 2.1 AA Accessibility Hardened</span></li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span>Dedicated Priority Support Channel</span></li>
+                    </ul>
                 </div>
                 <footer class="card__footer">
-                    <button class="btn btn--primary">Choose Pro</button>
+                    <button class="btn btn--primary" id="btn-pro">Start Free 14-Day Trial</button>
                 </footer>
             </article>
-            <!-- Card 3: Standard Flex -->
+
+            <!-- Card 3: Enterprise (Standard Flex: flex: 1 1 300px) -->
             <article class="card">
                 <header class="card__header">
                     <h2 class="card__title">Enterprise</h2>
                 </header>
+                <div class="card__pricing">
+                    <span class="currency">$</span>
+                    <span class="amount">199</span>
+                    <span class="period">/month</span>
+                    <span class="annual-note" style="display: none;"></span>
+                </div>
                 <div class="card__body">
-                    <img src="assets/images/Profile-picture.jpg" alt="Enterprise package preview" class="feature-img">
-                    <p class="card__desc">Full-stack architecture, custom CI/CD pipelines, and high-availability setups.
+                    <img src="assets/images/tier-enterprise.svg" alt="Enterprise cloud architecture preview" class="feature-img">
+                    <p class="card__desc">
+                        Full-stack architecture, microfrontends, custom CI/CD deployment pipelines, and high-availability mission-critical setups.
                     </p>
+                    <ul class="card__features">
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span><strong>All Pro Features</strong> Included</span></li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span>Full-Stack Architecture & Microfrontends</span></li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span>Custom CI/CD Pipelines & Containers</span></li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span><strong>99.99% Uptime</strong> SLA Guarantee</span></li>
+                        <li class="feature-item"><i class="fa-solid fa-check"></i> <span>Dedicated Principal Lead Engineer</span></li>
+                    </ul>
                 </div>
                 <footer class="card__footer">
-                    <button class="btn btn--primary">Choose Enterprise</button>
+                    <button class="btn btn--outline" id="btn-enterprise">Choose Enterprise</button>
                 </footer>
             </article>
+
+        </section>
+
+        <!-- Trust & Technology Stack Strip -->
+        <section class="trust-section" id="tech-stack" aria-label="Technology Stack Integrations">
+            <h3 class="trust-title">Supported Core Technologies & Standards</h3>
+            <div class="tech-badge-deck">
+                <span class="tech-pill"><i class="fa-brands fa-html5"></i> HTML5 Semantic</span>
+                <span class="tech-pill"><i class="fa-brands fa-css3-alt"></i> Modern CSS3</span>
+                <span class="tech-pill"><i class="fa-brands fa-js"></i> Vanilla JS (ES6+)</span>
+                <span class="tech-pill"><i class="fa-brands fa-react"></i> React & Next.js</span>
+                <span class="tech-pill"><i class="fa-brands fa-node"></i> Node.js Runtime</span>
+                <span class="tech-pill"><i class="fa-brands fa-docker"></i> Docker Containers</span>
+                <span class="tech-pill"><i class="fa-brands fa-aws"></i> Cloud Infrastructure</span>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq" aria-label="Frequently Asked Questions">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our developer service tiers and architecture.</p>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item" open>
+                    <summary>Can I upgrade, downgrade, or cancel at any time?</summary>
+                    <p>Yes, absolutely. You can change your service tier or cancel your subscription directly from your account dashboard with immediate effect. Pro-rated credits are automatically applied on upgrade.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Why zero-dependency vanilla CSS and JS?</summary>
+                    <p>Building with native W3C web standards guarantees sub-second initial paint times, zero compilation build steps, no vulnerability alerts from third-party npm packages, and 100% browser longevity.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How does the 14-Day Free Trial on the Pro Tier work?</summary>
+                    <p>The Pro Developer tier gives you unrestricted access to our component libraries, architecture blueprints, and priority review channel for 14 days without upfront commitment.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do you provide custom Enterprise contracts and SLAs?</summary>
+                    <p>Yes. Our Enterprise tier includes tailored contracts, custom NDAs, dedicated CI/CD workflow automation, and a 99.99% uptime Service Level Agreement guaranteed in writing.</p>
+                </details>
+            </div>
         </section>
     </main>
+
+    <!-- Site Footer -->
     <footer class="site-footer">
         <div class="footer__container">
             <div class="footer__brand">
-                <h3>DevLogo</h3>
-                <p>Crafting digital experiences with modern web technologies.</p>
+                <h3>Dev<span>Logo</span></h3>
+                <p>Crafting accessible, ultra-performant digital experiences with modern web technologies and native CSS mechanics.</p>
+                <div class="status-indicator">
+                    <span class="pulse-dot"></span>
+                    <span>All developer services operational</span>
+                </div>
             </div>
             <div class="footer__social">
-                <h4>Connect</h4>
+                <h4>Connect With Us</h4>
                 <ul class="social-list">
-                    <li><a href="#" aria-label="Visit our GitHub"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="#" aria-label="Visit our LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="#" aria-label="Visit our Facebook"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#" aria-label="Visit our YouTube"><i class="fa-brands fa-youtube"></i></a></li>
-                    <li><a href="#" aria-label="Visit our WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://github.com/bhabakjishnu" target="_blank" rel="noopener noreferrer" aria-label="Visit our GitHub"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our X Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer__copyright">
-            <p>&copy; 2026 DevLogo. All rights reserved.</p>
+            <p>&copy; 2026 DevLogo. Engineered by Jishnu Bhabak. All rights reserved.</p>
+            <p class="spec-notes">Pure HTML5 • Modern CSS3 (Flexbox & Native Nesting) • WCAG 2.1 AA Compliant</p>
         </div>
     </footer>
+
+    <!-- Interactive Plan Selection Toast Notification -->
+    <div id="plan-toast" class="toast-notification" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <div class="toast-content">
+            <h5 id="toast-plan-name">Plan Selected</h5>
+            <p id="toast-plan-desc">Your choice has been recorded.</p>
+        </div>
+        <button id="toast-close" class="toast-close" aria-label="Close notification"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Interactive Client Script -->
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

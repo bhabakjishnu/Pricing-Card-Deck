@@ -1,13 +1,41 @@
-/* ========================================
+/* ==========================================================================
    Base & Typography
-   ======================================== */
+   ========================================================================== */
 
 body {
-    background-color: var(--body-background);
+    background-color: var(--bg-canvas);
+    background-image: 
+        radial-gradient(circle at 15% 10%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 25%, rgba(0, 240, 255, 0.10) 0%, transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+    background-attachment: fixed;
     font-family: var(--font-body);
-    color: var(--text-dark);
+    color: var(--text-primary);
     display: flex;
     flex-direction: column;
     min-height: 100svh; /* 2026 standard: Small Viewport Height prevents mobile UI jumping */
+    line-height: 1.6;
 }
 
+::selection {
+    background-color: var(--accent-cyan);
+    color: var(--text-inverted);
+}
+
+/* Custom Webkit Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}

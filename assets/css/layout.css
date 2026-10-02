@@ -196,11 +196,13 @@
         letter-spacing: -0.5px;
         background: var(--grad-text);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
 
         & .gradient-span {
             background: var(--grad-text-cyan);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     }

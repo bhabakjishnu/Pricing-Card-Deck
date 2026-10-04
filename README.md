@@ -29,7 +29,8 @@
 
 ## 🖥️ Desktop Preview
 
-![Developer Services Pricing Card Deck — Desktop View](./assets/images/desktop-preview.png)
+[![Developer Services Pricing Card Deck — Desktop View](./assets/images/desktop-preview.png)](https://bhabakjishnu.github.io/Pricing-Card-Deck/)
+
 
 ---
 

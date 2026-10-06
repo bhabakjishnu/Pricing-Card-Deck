@@ -38,16 +38,16 @@
         top: 0;
         left: 0;
         right: 0;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
         opacity: 0;
         transition: opacity var(--transition-fast);
     }
 
     &:hover {
-        transform: translateY(-8px);
+        transform: translateY(-4px);
         box-shadow: var(--shadow-card-hover);
-        border-color: rgba(255, 255, 255, 0.28);
+        border-color: var(--border-card-hover);
 
         &::before {
             opacity: 1;
@@ -75,7 +75,7 @@
         object-fit: cover;
         margin-block: 0.5rem;
         border: 1px solid var(--border-subtle);
-        background-color: #0b1120;
+        background-color: #0d1017;
         transition: transform var(--transition-fast);
     }
 
@@ -111,8 +111,8 @@
     align-self: stretch; 
     
     background: var(--bg-card-featured);
-    border: 2px solid var(--border-featured);
-    box-shadow: var(--glow-featured);
+    border: 1px solid var(--border-featured);
+    box-shadow: var(--shadow-card);
     padding: 2.75rem 2.25rem 2.25rem;
 
     /* Top Ambient Highlight Ribbon */
@@ -122,27 +122,26 @@
         top: 0;
         left: 0;
         right: 0;
-        height: 4px;
+        height: 3px;
         background: var(--grad-primary);
         opacity: 1;
     }
 
     &:hover {
-        transform: translateY(-12px);
-        box-shadow: 0 0 50px rgba(0, 240, 255, 0.35), var(--shadow-card-hover);
-        border-color: #38bdf8;
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-card-hover);
+        border-color: var(--accent-indigo);
     }
 
     & .badge {
         background: var(--grad-featured-badge);
-        color: #040814;
+        color: #ffffff;
         padding: 0.3rem 0.85rem;
         border-radius: var(--radius-full);
         font-size: 0.75rem;
-        font-weight: 800;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        box-shadow: var(--glow-badge);
     }
 
     & .card__title {

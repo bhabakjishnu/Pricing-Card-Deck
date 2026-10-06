@@ -77,7 +77,7 @@ This codebase adheres to a rigorous, disciplined engineering workflow:
 | **1. Understand** | Requirements & Constraints | Established scope: zero-framework dependency, pure flexbox weighting, accessible landmarks. |
 | **2. Inspect** | Codebase & Asset Audit | Identified broken CDN links, CSS `@import` ordering, reused profile image, missing repo hygiene. |
 | **3. Plan** | Architectural Roadmap | Mapped modular stylesheet pipeline, interactive billing state machine, and SVG design specs. |
-| **4. Design** | Visual Design System | Formulated Modern Minimalist Dark theme (`#0B0D13`), refined indigo/slate accents, and bespoke vector illustrations. |
+| **4. Design** | Visual Design System | Formulated custom 4-color palette: Azure (`#3A86FF`), Lavender (`#BDB2FF`), Rose (`#FFD6E0`), and Blush Canvas (`#FFF4F4`). |
 | **5. Implement** | Engineering Implementation | Built modular CSS, semantic HTML5, interactive billing switch, toast feedback, and drawer menu. |
 | **6. Test** | Multi-Device Browser Testing | Visual and functional validation across Mobile (375px), Tablet (768px), and Desktop (1200px+). |
 | **7. Review** | Code Quality & A11y Audit | Enforced BEM conventions, W3C standards compliance, and WCAG 2.1 AA contrast ratios. |
@@ -90,7 +90,7 @@ This codebase adheres to a rigorous, disciplined engineering workflow:
 ## ✨ Key Features
 
 ### Core Layout Features
-- **Visual Conversion Anchor:** The featured "Pro Developer" card stands out through prioritized flex basis (`flex: 2 0 340px`), refined indigo accent ribbon, a "Most Popular" badge, and full-height vertical stretch (`align-self: stretch`).
+- **Visual Conversion Anchor:** The featured "Pro Developer" card stands out through prioritized flex basis (`flex: 2 0 340px`), Azure blue accent ribbon, a "Most Popular" badge, and full-height vertical stretch (`align-self: stretch`).
 - **Deck-Level Alignment:** Automated flex re-wrapping (`flex-wrap: wrap`) gracefully handles fluid viewport transitions across mobile, tablet, and widescreen displays.
 - **Equalized Call-To-Action (CTA) Pinning:** Utilizes CSS `margin-block-start: auto` on card footers to guarantee all action buttons remain horizontally aligned across varying feature list lengths.
 
@@ -288,12 +288,15 @@ All brand aesthetics, color palettes, and typography configurations are centrali
 
 ```css
 :root {
-    /* Color Palette */
-    --bg-canvas: #0b0d13;              /* Dark canvas background */
-    --bg-card: #141824;                /* Minimalist slate card surface */
-    --accent-primary: #4f46e5;         /* Primary brand indigo accent */
-    --accent-indigo: #6366f1;          /* Secondary purple/indigo accent */
-    --accent-emerald: #10b981;         /* Success/check accent */
+    /* 4-Color Palette Tokens */
+    --color-azure: #3A86FF;            /* Primary vibrant azure blue */
+    --color-lavender: #BDB2FF;         /* Secondary soft lavender */
+    --color-rose: #FFD6E0;             /* Soft pastel rose accent */
+    --color-blush-canvas: #FFF4F4;     /* Light warm blush canvas */
+
+    --bg-canvas: var(--color-blush-canvas);
+    --bg-card: #ffffff;
+    --accent-primary: var(--color-azure);
 
     /* Typography Tokens */
     --font-logo: "Knewave", system-ui;         /* Decorative brand logo font */

@@ -1,67 +1,76 @@
 /* ==========================================================================
    Design Tokens & CSS Custom Properties
    Project: Responsive Developer Pricing Card Deck
-   Architecture: Pure CSS3, Semantic Theme Tokens, Linear/Vercel Minimalist Dark
+   Architecture: Pure CSS3, Semantic Theme Tokens, Custom 4-Color Pastel & Azure Palette
+   Theme Palette: #3A86FF (Azure), #BDB2FF (Lavender), #FFD6E0 (Rose), #FFF4F4 (Canvas)
    ========================================================================== */
 
 :root {
-    /* --- Canvas & Surface Colors (Linear / Vercel Minimalist Dark) --- */
-    --bg-canvas: #0b0d13;
-    --bg-surface: #121620;
-    --bg-card: #141824;
-    --bg-card-featured: #171c2b;
-    --bg-header: rgba(11, 13, 19, 0.85);
-    --bg-footer: #080a0f;
-    --bg-pill: rgba(255, 255, 255, 0.05);
+    /* --- The 4 Core Palette Tokens --- */
+    --color-azure: #3A86FF;
+    --color-lavender: #BDB2FF;
+    --color-rose: #FFD6E0;
+    --color-blush-canvas: #FFF4F4;
 
-    /* --- Accent & Brand Palette (Matte, Refined Indigo & Electric Blue) --- */
-    --accent-primary: #4f46e5;
-    --accent-primary-hover: #4338ca;
-    --accent-blue: #3b82f6;
-    --accent-indigo: #6366f1;
-    --accent-purple: #8b5cf6;
+    /* --- Canvas & Surface Colors --- */
+    --bg-canvas: var(--color-blush-canvas);
+    --bg-surface: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-featured: linear-gradient(180deg, #ffffff 0%, var(--color-blush-canvas) 100%);
+    --bg-header: rgba(255, 244, 244, 0.88);
+    --bg-footer: #ffffff;
+    --bg-pill: var(--color-rose);
+
+    /* --- Accent & Brand Palette --- */
+    --accent-primary: var(--color-azure);
+    --accent-primary-hover: #2563eb;
+    --accent-secondary: var(--color-lavender);
+    --accent-soft: var(--color-rose);
+    --accent-blue: var(--color-azure);
+    --accent-indigo: var(--color-lavender);
+    --accent-purple: #8338ec;
     --accent-emerald: #10b981;
     --accent-amber: #f59e0b;
-    --accent-cyan: #38bdf8;
-    --accent-cyan-rgb: 56, 189, 248;
+    --accent-cyan: var(--color-azure);
+    --accent-cyan-rgb: 58, 134, 255;
 
     /* --- Gradient Presets --- */
-    --grad-primary: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
-    --grad-featured-badge: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
-    --grad-text: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
-    --grad-text-accent: linear-gradient(135deg, #818cf8 0%, #60a5fa 100%);
+    --grad-primary: linear-gradient(135deg, var(--color-azure) 0%, var(--color-lavender) 100%);
+    --grad-featured-badge: linear-gradient(135deg, var(--color-azure) 0%, #8338ec 100%);
+    --grad-text: linear-gradient(180deg, #181829 0%, #4b5563 100%);
+    --grad-text-accent: linear-gradient(135deg, var(--color-azure) 0%, #8338ec 50%, var(--color-lavender) 100%);
     --grad-text-cyan: var(--grad-text-accent);
 
-    /* --- Borders & Outlines (Crisp, Subtle, Architectural) --- */
-    --border-subtle: rgba(255, 255, 255, 0.08);
-    --border-card: rgba(255, 255, 255, 0.1);
-    --border-card-hover: rgba(255, 255, 255, 0.22);
-    --border-featured: #4f46e5;
-    --border-highlight: rgba(99, 102, 241, 0.4);
+    /* --- Borders & Outlines --- */
+    --border-subtle: var(--color-rose);
+    --border-card: rgba(189, 178, 255, 0.55);
+    --border-card-hover: var(--color-azure);
+    --border-featured: var(--color-azure);
+    --border-highlight: var(--color-lavender);
 
     /* --- Typography Tokens --- */
     --font-logo: "Knewave", system-ui, cursive;
     --font-heading: "Archivo Black", sans-serif;
     --font-body: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-    /* --- Text Hierarchies --- */
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-    --text-inverted: #0b0d13;
+    /* --- Text Hierarchies (Optimized for High-Contrast Clean Light Surfaces) --- */
+    --text-primary: #181829;
+    --text-secondary: #525b75;
+    --text-muted: #828ba3;
+    --text-inverted: #ffffff;
 
     /* --- Button Tokens --- */
     --btn-primary-bg: var(--grad-primary);
     --btn-primary-text: #ffffff;
-    --btn-secondary-bg: rgba(255, 255, 255, 0.05);
-    --btn-secondary-hover: rgba(255, 255, 255, 0.1);
-    --btn-secondary-text: #f8fafc;
+    --btn-secondary-bg: #ffffff;
+    --btn-secondary-hover: var(--color-blush-canvas);
+    --btn-secondary-text: #181829;
 
-    /* --- Elevational Shadows (Crisp & Natural, Zero Blurry Neon Glow) --- */
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-    --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.2);
-    --shadow-card-hover: 0 12px 30px -4px rgba(0, 0, 0, 0.6), 0 4px 8px -2px rgba(0, 0, 0, 0.3);
-    --glow-featured: 0 8px 30px -4px rgba(0, 0, 0, 0.5);
+    /* --- Elevational Shadows (Soft, Natural Light Shadows) --- */
+    --shadow-sm: 0 2px 6px rgba(58, 134, 255, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0 10px 30px -5px rgba(58, 134, 255, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+    --shadow-card-hover: 0 20px 40px -10px rgba(58, 134, 255, 0.16), 0 8px 16px -4px rgba(0, 0, 0, 0.06);
+    --glow-featured: none;
     --glow-badge: none;
 
     /* --- Radii & Transitions --- */

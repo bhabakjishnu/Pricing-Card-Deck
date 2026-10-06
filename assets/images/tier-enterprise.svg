@@ -6,12 +6,8 @@
     </linearGradient>
     <linearGradient id="entPurpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#818cf8" />
-      <stop offset="100%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#a78bfa" />
     </linearGradient>
-    <filter id="glowEnt" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="7" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
   </defs>
 
   <!-- Background Card Canvas -->
@@ -23,11 +19,11 @@
   <ellipse cx="160" cy="90" rx="90" ry="35" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" transform="rotate(25 160 90)" />
 
   <!-- Central Cloud Infrastructure Core -->
-  <circle cx="160" cy="90" r="42" fill="#1e1b4b" stroke="url(#entPurpleGrad)" stroke-width="2" filter="url(#glowEnt)" />
+  <circle cx="160" cy="90" r="42" fill="#1e1b4b" stroke="url(#entPurpleGrad)" stroke-width="2" />
   
   <!-- Server / Shield Nodes -->
   <path d="M160 68 L178 78 V98 L160 108 L142 98 V78 Z" fill="#0f172a" stroke="#c084fc" stroke-width="2" />
-  <circle cx="160" cy="88" r="6" fill="#00f0ff" filter="url(#glowEnt)" />
+  <circle cx="160" cy="88" r="6" fill="#818cf8" />
 
   <!-- Satellite Nodes -->
   <!-- Node 1: Left Cloud -->

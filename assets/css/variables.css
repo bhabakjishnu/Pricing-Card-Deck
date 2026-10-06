@@ -1,39 +1,43 @@
 /* ==========================================================================
    Design Tokens & CSS Custom Properties
    Project: Responsive Developer Pricing Card Deck
-   Architecture: Pure CSS3, Semantic Theme Tokens, WCAG 2.1 AA Compliant
+   Architecture: Pure CSS3, Semantic Theme Tokens, Linear/Vercel Minimalist Dark
    ========================================================================== */
 
 :root {
-    /* --- Canvas & Surface Colors (Dark High-Tech Glassmorphism) --- */
-    --bg-canvas: #090d16;
-    --bg-surface: #0f172a;
-    --bg-card: rgba(15, 23, 42, 0.82);
-    --bg-card-featured: linear-gradient(180deg, rgba(20, 32, 60, 0.95) 0%, rgba(12, 18, 36, 0.98) 100%);
-    --bg-header: rgba(9, 13, 22, 0.85);
-    --bg-footer: #070a10;
-    --bg-pill: rgba(255, 255, 255, 0.06);
+    /* --- Canvas & Surface Colors (Linear / Vercel Minimalist Dark) --- */
+    --bg-canvas: #0b0d13;
+    --bg-surface: #121620;
+    --bg-card: #141824;
+    --bg-card-featured: #171c2b;
+    --bg-header: rgba(11, 13, 19, 0.85);
+    --bg-footer: #080a0f;
+    --bg-pill: rgba(255, 255, 255, 0.05);
 
-    /* --- Accent & Brand Palette --- */
-    --accent-cyan: #00f0ff;
-    --accent-cyan-rgb: 0, 240, 255;
+    /* --- Accent & Brand Palette (Matte, Refined Indigo & Electric Blue) --- */
+    --accent-primary: #4f46e5;
+    --accent-primary-hover: #4338ca;
     --accent-blue: #3b82f6;
     --accent-indigo: #6366f1;
-    --accent-purple: #a855f7;
+    --accent-purple: #8b5cf6;
     --accent-emerald: #10b981;
     --accent-amber: #f59e0b;
+    --accent-cyan: #38bdf8;
+    --accent-cyan-rgb: 56, 189, 248;
 
     /* --- Gradient Presets --- */
-    --grad-primary: linear-gradient(135deg, #00f0ff 0%, #3b82f6 50%, #6366f1 100%);
-    --grad-featured-badge: linear-gradient(135deg, #00f0ff 0%, #38bdf8 100%);
-    --grad-text: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
-    --grad-text-cyan: linear-gradient(135deg, #00f0ff 0%, #a855f7 100%);
+    --grad-primary: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+    --grad-featured-badge: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+    --grad-text: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+    --grad-text-accent: linear-gradient(135deg, #818cf8 0%, #60a5fa 100%);
+    --grad-text-cyan: var(--grad-text-accent);
 
-    /* --- Borders & Outlines --- */
-    --border-subtle: rgba(255, 255, 255, 0.09);
-    --border-card: rgba(148, 163, 184, 0.14);
-    --border-featured: #00f0ff;
-    --border-highlight: rgba(0, 240, 255, 0.45);
+    /* --- Borders & Outlines (Crisp, Subtle, Architectural) --- */
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-card: rgba(255, 255, 255, 0.1);
+    --border-card-hover: rgba(255, 255, 255, 0.22);
+    --border-featured: #4f46e5;
+    --border-highlight: rgba(99, 102, 241, 0.4);
 
     /* --- Typography Tokens --- */
     --font-logo: "Knewave", system-ui, cursive;
@@ -44,21 +48,21 @@
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
     --text-muted: #64748b;
-    --text-inverted: #090d16;
+    --text-inverted: #0b0d13;
 
     /* --- Button Tokens --- */
     --btn-primary-bg: var(--grad-primary);
-    --btn-primary-text: #090d16;
-    --btn-secondary-bg: rgba(255, 255, 255, 0.08);
-    --btn-secondary-hover: rgba(255, 255, 255, 0.16);
+    --btn-primary-text: #ffffff;
+    --btn-secondary-bg: rgba(255, 255, 255, 0.05);
+    --btn-secondary-hover: rgba(255, 255, 255, 0.1);
     --btn-secondary-text: #f8fafc;
 
-    /* --- Elevational Shadows & Glows --- */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-card: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
-    --shadow-card-hover: 0 30px 60px -15px rgba(0, 0, 0, 0.85);
-    --glow-featured: 0 0 40px rgba(0, 240, 255, 0.22), 0 0 80px rgba(99, 102, 241, 0.15);
-    --glow-badge: 0 0 16px rgba(0, 240, 255, 0.4);
+    /* --- Elevational Shadows (Crisp & Natural, Zero Blurry Neon Glow) --- */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.2);
+    --shadow-card-hover: 0 12px 30px -4px rgba(0, 0, 0, 0.6), 0 4px 8px -2px rgba(0, 0, 0, 0.3);
+    --glow-featured: 0 8px 30px -4px rgba(0, 0, 0, 0.5);
+    --glow-badge: none;
 
     /* --- Radii & Transitions --- */
     --radius-sm: 8px;
@@ -69,7 +73,7 @@
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    /* --- Backwards-Compatible Tokens (preserving original references) --- */
+    /* --- Backwards-Compatible Tokens --- */
     --body-background: var(--bg-canvas);
     --card-background: var(--bg-card);
     --card-featured-bg: var(--bg-card-featured);
@@ -77,6 +81,6 @@
     --text-light: var(--text-primary);
     --text-dark: var(--text-primary);
     --btn-background: var(--btn-secondary-bg);
-    --btn-primary: var(--accent-cyan);
+    --btn-primary: var(--accent-primary);
     --footer-bg: var(--bg-footer);
 }

@@ -33,19 +33,18 @@
     /* Primary High-Impact CTA (Used for Featured Tier and Main Actions) */
     &--primary {
         background: var(--grad-primary);
-        color: #050811;
-        font-weight: 700;
+        color: #ffffff;
+        font-weight: 600;
         width: 100%;
         padding-block: 0.85rem;
-        box-shadow: 0 4px 20px rgba(0, 240, 255, 0.3);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(79, 70, 229, 0.25);
         border: none;
 
         &:hover {
-            transform: translateY(-3px);
-            filter: brightness(1.1);
-            box-shadow: 0 8px 30px rgba(0, 240, 255, 0.5);
-            background: var(--grad-primary);
-            color: #050811;
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #4338ca 0%, #2563eb 100%);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(79, 70, 229, 0.35);
+            color: #ffffff;
         }
     }
 
@@ -58,10 +57,10 @@
         color: var(--text-primary);
 
         &:hover {
-            background: rgba(0, 240, 255, 0.08);
-            border-color: var(--accent-cyan);
-            color: var(--accent-cyan);
-            box-shadow: 0 4px 15px rgba(0, 240, 255, 0.15);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
     }
 
@@ -79,16 +78,16 @@
     }
 
     &--signup {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.08);
         border: 1px solid var(--border-subtle);
         color: var(--text-primary);
         padding: 0.45rem 1.15rem;
         font-size: 0.9rem;
 
         &:hover {
-            border-color: var(--accent-cyan);
-            color: var(--accent-cyan);
-            background: rgba(0, 240, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.12);
         }
     }
 }
@@ -101,7 +100,7 @@
     gap: 1rem;
     margin-block: 1rem 0.5rem;
     padding: 0.35rem 0.5rem;
-    background: rgba(15, 23, 42, 0.9);
+    background: #11141d;
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-full);
     box-shadow: var(--shadow-sm);
@@ -160,17 +159,17 @@
     }
 
     & input:checked + .slider {
-        background: var(--grad-primary);
+        background: var(--accent-primary);
         border-color: transparent;
 
         &::before {
             transform: translateX(24px);
-            background-color: #050811;
+            background-color: #ffffff;
         }
     }
 
     & input:focus-visible + .slider {
-        outline: 2px solid var(--accent-cyan);
+        outline: 2px solid var(--accent-indigo);
         outline-offset: 2px;
     }
 }
@@ -199,7 +198,7 @@
     & .currency {
         font-size: 1.5rem;
         font-weight: 700;
-        color: var(--accent-cyan);
+        color: var(--accent-indigo);
         line-height: 1;
     }
 
@@ -281,12 +280,12 @@ details.faq-item {
     transition: border-color var(--transition-fast), background-color var(--transition-fast);
 
     &[open] {
-        border-color: var(--border-highlight);
-        background: rgba(17, 24, 48, 0.9);
+        border-color: rgba(99, 102, 241, 0.35);
+        background: #151926;
 
         & summary::after {
             transform: rotate(180deg);
-            color: var(--accent-cyan);
+            color: var(--accent-indigo);
         }
     }
 
@@ -327,9 +326,9 @@ details.faq-item {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: #0f172a;
-    border: 1px solid var(--accent-cyan);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), var(--glow-badge);
+    background: #141824;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
     border-radius: var(--radius-md);
     padding: 1rem 1.5rem;
     color: var(--text-primary);
@@ -349,7 +348,7 @@ details.faq-item {
 
     & .toast-icon {
         font-size: 1.5rem;
-        color: var(--accent-cyan);
+        color: var(--accent-emerald);
     }
 
     & .toast-content {

@@ -5,9 +5,7 @@
 body {
     background-color: var(--bg-canvas);
     background-image: 
-        radial-gradient(circle at 15% 10%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
-        radial-gradient(circle at 85% 25%, rgba(0, 240, 255, 0.10) 0%, transparent 45%),
-        radial-gradient(circle at 50% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 50% -10%, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
     background-attachment: fixed;
     font-family: var(--font-body);
     color: var(--text-primary);
@@ -18,8 +16,8 @@ body {
 }
 
 ::selection {
-    background-color: var(--accent-cyan);
-    color: var(--text-inverted);
+    background-color: rgba(99, 102, 241, 0.35);
+    color: #ffffff;
 }
 
 /* Custom Webkit Scrollbar */

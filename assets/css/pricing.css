@@ -38,8 +38,8 @@
         top: 0;
         left: 0;
         right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--color-lavender), transparent);
         opacity: 0;
         transition: opacity var(--transition-fast);
     }
@@ -75,7 +75,7 @@
         object-fit: cover;
         margin-block: 0.5rem;
         border: 1px solid var(--border-subtle);
-        background-color: #0d1017;
+        background-color: var(--color-blush-canvas);
         transition: transform var(--transition-fast);
     }
 
@@ -111,8 +111,8 @@
     align-self: stretch; 
     
     background: var(--bg-card-featured);
-    border: 1px solid var(--border-featured);
-    box-shadow: var(--shadow-card);
+    border: 2px solid var(--border-featured);
+    box-shadow: var(--shadow-card-hover);
     padding: 2.75rem 2.25rem 2.25rem;
 
     /* Top Ambient Highlight Ribbon */
@@ -122,15 +122,15 @@
         top: 0;
         left: 0;
         right: 0;
-        height: 3px;
+        height: 4px;
         background: var(--grad-primary);
         opacity: 1;
     }
 
     &:hover {
         transform: translateY(-6px);
-        box-shadow: var(--shadow-card-hover);
-        border-color: var(--accent-indigo);
+        box-shadow: 0 24px 48px -12px rgba(58, 134, 255, 0.22);
+        border-color: var(--accent-primary);
     }
 
     & .badge {
@@ -145,7 +145,7 @@
     }
 
     & .card__title {
-        color: #ffffff;
+        color: var(--text-primary);
         font-size: 1.55rem;
     }
 }

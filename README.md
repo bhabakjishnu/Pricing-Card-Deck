@@ -29,7 +29,11 @@
 
 ## 🖥️ Desktop Preview
 
-[![Developer Services Pricing Card Deck — Desktop View](./assets/images/desktop-preview.png)](https://bhabakjishnu.github.io/Pricing-Card-Deck/)
+<p align="center">
+  <a href="https://bhabakjishnu.github.io/Pricing-Card-Deck/">
+    <img src="./assets/images/desktop-preview.png" alt="Developer Services Pricing Card Deck — Desktop View" width="1440" height="1440" style="max-width: 100%; height: auto; object-fit: contain;" />
+  </a>
+</p>
 
 
 ---

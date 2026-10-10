@@ -31,7 +31,7 @@
 
 <p align="center">
   <a href="https://bhabakjishnu.github.io/Pricing-Card-Deck/">
-    <img src="./assets/desktop-preview.png" alt="Desktop Preview" style="width: 100dvw; height: 100dvh; object-fit: cover;" width="100%" />
+    <img src="./assets/desktop-preview.png" alt="Developer Services Pricing Card Deck — Desktop Preview" width="850" style="max-width: 850px; width: 100%; height: auto;" />
   </a>
 </p>
 
